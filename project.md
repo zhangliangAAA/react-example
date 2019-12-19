@@ -8,3 +8,7 @@
 
 可用于antd按需加载、使用装饰器等
 
+## Redux
+无异步处理
+安装插件： 
+npm install redux-thunk redux-logger --save

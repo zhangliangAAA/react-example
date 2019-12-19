@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import { Provider } from 'react-redux';
+import store from './store'
 import { Welcome1,Welcome2 } from './components/CompType'
 import Clock from './components/Clock'
 import StateTest from './components/State'
@@ -16,6 +17,7 @@ import ContextTest from './components/Context';
 import WrappedNormalLoginForm from './components/AntdForm';
 import MyForm from './components/MyForm';
 import ReduxComp from './components/ReduxComp';
+
 
 function App() {
   return (
@@ -48,7 +50,10 @@ function App() {
       {/* <ContextTest></ContextTest> */}
       {/* <WrappedNormalLoginForm></WrappedNormalLoginForm> */}
       {/* <MyForm></MyForm> */}
-      <ReduxComp></ReduxComp>
+      <Provider store={store}>
+        <ReduxComp></ReduxComp>
+      </Provider>
+      
     </div>
   );
 }
