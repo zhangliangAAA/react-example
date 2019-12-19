@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 // import store from '../store'
 import {connect} from 'react-redux'
 import { add, minus,asyncAdd } from "../store/countRedux";
-const mapStateToProps = state => ({num: state.counter}) //带命名空间
+const mapStateToProps = state => {
+  console.log('state',state);
+  
+  return {num: state.counter}
+} //带命名空间
 
 const mapDispathToProps = { add, minus,asyncAdd }
 

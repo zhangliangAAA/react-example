@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';  //配合store使用
 import store from './store'
 import { Welcome1,Welcome2 } from './components/CompType'
 import Clock from './components/Clock'
@@ -17,7 +17,7 @@ import ContextTest from './components/Context';
 import WrappedNormalLoginForm from './components/AntdForm';
 import MyForm from './components/MyForm';
 import ReduxComp from './components/ReduxComp';
-
+import RouterComp from './components/RouterComp';
 
 function App() {
   return (
@@ -50,8 +50,10 @@ function App() {
       {/* <ContextTest></ContextTest> */}
       {/* <WrappedNormalLoginForm></WrappedNormalLoginForm> */}
       {/* <MyForm></MyForm> */}
+      {/* 使用connect的组件要放在Provider下面 */}
       <Provider store={store}>
-        <ReduxComp></ReduxComp>
+        {/* <ReduxComp></ReduxComp> */}
+        <RouterComp></RouterComp>
       </Provider>
       
     </div>
