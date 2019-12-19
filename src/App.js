@@ -50,8 +50,8 @@ function App() {
       {/* <ContextTest></ContextTest> */}
       {/* <WrappedNormalLoginForm></WrappedNormalLoginForm> */}
       {/* <MyForm></MyForm> */}
-      {/* 使用connect的组件要放在Provider下面 */}
-      <Provider store={store}>
+      {/* 使用connect的组件要放在Provider下面,注入store */}
+      <Provider store={store}> 
         {/* <ReduxComp></ReduxComp> */}
         <RouterComp></RouterComp>
       </Provider>
