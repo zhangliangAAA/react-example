@@ -15,6 +15,7 @@ import HookTest from './components/HookTest';
 import ContextTest from './components/Context';
 import WrappedNormalLoginForm from './components/AntdForm';
 import MyForm from './components/MyForm';
+import ReduxComp from './components/ReduxComp';
 
 function App() {
   return (
@@ -46,7 +47,8 @@ function App() {
       {/* <HookTest></HookTest> */}
       {/* <ContextTest></ContextTest> */}
       {/* <WrappedNormalLoginForm></WrappedNormalLoginForm> */}
-      <MyForm></MyForm>
+      {/* <MyForm></MyForm> */}
+      <ReduxComp></ReduxComp>
     </div>
   );
 }

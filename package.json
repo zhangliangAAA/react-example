@@ -11,7 +11,8 @@
     "react": "^16.12.0",
     "react-app-rewired": "^2.0.2-next.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "redux": "^4.0.4"
   },
   "scripts": {
     "start": "react-app-rewired start",
