@@ -1,3 +1,4 @@
+基于Create React App，将常用功能集合在一起。
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
