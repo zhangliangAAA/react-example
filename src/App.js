@@ -11,6 +11,10 @@ import AntdTest from './components/AntdTest';
 import CommentList from './components/CommentList';
 import Hoc from './components/Hoc';
 import Composition from './components/Composition';
+import HookTest from './components/HookTest';
+import ContextTest from './components/Context';
+import WrappedNormalLoginForm from './components/AntdForm';
+import MyForm from './components/MyForm';
 
 function App() {
   return (
@@ -38,7 +42,11 @@ function App() {
       <AntdTest></AntdTest> */}
       {/* <CommentList></CommentList> */}
       {/* <Hoc></Hoc> */}
-      <Composition color="red"></Composition>
+      {/* <Composition color="red"></Composition> */}
+      {/* <HookTest></HookTest> */}
+      {/* <ContextTest></ContextTest> */}
+      {/* <WrappedNormalLoginForm></WrappedNormalLoginForm> */}
+      <MyForm></MyForm>
     </div>
   );
 }
