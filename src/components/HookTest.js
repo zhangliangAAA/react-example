@@ -25,7 +25,7 @@ export default function HookTest(){
     // 使用浏览器的 API 更新页面标题
     document.title = `You clicked ${count} times`;
     console.log('all-changes-work');
-  },[count]); //指定依赖count，即count变化时才执行; []是所有变化
+  },[count]); //指定依赖count，即count变化时才执行;
 
   const age = useAge()
   const [fruit, setFruit] = useState('banana')

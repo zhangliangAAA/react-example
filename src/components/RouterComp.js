@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component,useState } from 'react';
 import { BrowserRouter, Link, Route, Switch, Redirect } from "react-router-dom";
 import {connect} from 'react-redux'
-import { login } from "../store/userRedux";
-
+// import { login } from "../store/userRedux";
+import { login } from "../store/userSaga";
 function  Home(params) {
   return <div>
     <h3>课程列表</h3>
@@ -85,12 +85,13 @@ class PrivateRoute extends Component {
 const Login = connect(
   state => ({
     isLogin: state.user.isLogin,
-    loading: state.user.loading
+    loading: state.user.loading,
+    error: state.user.error
   }),
   { login }
-)(function({ location, isLogin, login, loading }) {
+)(function({ location, isLogin, login, loading, error }) {
   const redirect = location.state.redirect || "/";
-
+  const [uname, setUname] = useState(""); // 用户名输入状态
   if (isLogin) {
     return <Redirect to={redirect} />;
   }
@@ -99,7 +100,14 @@ const Login = connect(
     <div>
       <p>用户登录</p>
       <hr />
-      <button onClick={login} disabled={loading}>
+      {/* 显示错误信息 */}
+      { error && <p style={{color:'red'}}>{error}</p>} {/* 输入用户名 */}
+      <input
+        type="text"
+        onChange={e => setUname(e.target.value)}
+        value={uname}
+      />
+      <button onClick={()=>login(uname)} disabled={loading}>
         {loading ? "登录中..." : "登录"}
       </button>
     </div>
