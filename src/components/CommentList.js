@@ -11,13 +11,15 @@ export default class CommentList extends Component {
   }
   componentDidMount() {
     setInterval(() => {
+      console.log('定时改变state 但是内容没变，注意组件是否渲染');
+      
       this.setState({
         comments: [
           { body: "react is very good", author: "facebook" },
           { body: "vue is very good", author: "youyuxi" }
         ]
       });
-    }, 1000);
+    }, 2000);
   }
   render() {
     return (
@@ -30,7 +32,7 @@ export default class CommentList extends Component {
   }
 }
 // 展示组件
-// function MyComment({data}){
+// function MyComment(data){
 //   console.log('Comment====');
 //   return (
 //     <div>
@@ -42,7 +44,7 @@ export default class CommentList extends Component {
 // 优化1
 // class MyComment extends Component{
 //   shouldComponentUpdate(nextProps){
-//     if(nextProps.data.body === this.props.data.body && nextProps.data.author === this.props.data.author){
+//     if(nextProps.body === this.props.body && nextProps.author === this.props.author){
 //       return false
 //     }
 //     return true;
@@ -51,8 +53,8 @@ export default class CommentList extends Component {
 //     console.log('Comment====');
 //     return (
 //     <div>
-//       <p>{this.props.data.body}</p>
-//       <p> --- {this.props.data.author}</p>
+//       <p>{this.props.body}</p>
+//       <p> --- {this.props.author}</p>
 //     </div>
 //     );
 //   }

@@ -72,7 +72,7 @@ function Radio({children,...rest}){
 export default function(props){
   const footer = <button>按钮</button>
   return <div>
-    {/* <WelcomeDialog {...props} footer={footer}></WelcomeDialog> */}
+    <WelcomeDialog {...props} footer={footer}></WelcomeDialog>
     <Fatcher name="getUser">
       {
         ({name,age}) => (
